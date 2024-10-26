@@ -1,0 +1,47 @@
+import java.awt.*;
+import javax.swing.*; 
+import javax.swing.JFrame; 
+public class RadioButtonDemo {    
+JFrame f;    
+RadioButtonDemo(){    
+f=new JFrame();     
+JRadioButton r1=new JRadioButton("A) Bird");    
+JRadioButton r2=new JRadioButton("B) Cat"); 
+JRadioButton r3=new JRadioButton("C) Dog");
+JRadioButton r4=new JRadioButton("C) Rabbit");
+JRadioButton r5=new JRadioButton("C) Pig");
+r1.setBounds(75,50,100,30);    
+r2.setBounds(75,100,100,30);
+r3.setBounds(75,150,100,30);
+r4.setBounds(75,200,100,30);
+r5.setBounds(75,250,100,30);
+ButtonGroup bg=new ButtonGroup();    
+bg.add(r1);bg.add(r2);bg.add(r3);bg.add(r4);bg.add(r5);   
+f.add(r1);f.add(r2);add(r3);add(r4);add(r5);      
+f.setSize(500,500);    
+f.setLayout(null);    
+
+f.setVisible(true);    
+}    
+public static void main(String[] args) {    
+    new RadioButtonExample();    
+}    
+} 
+ 
+public class mypic extends Canvas{  
+      
+    public void paint(Graphics g) {  
+  
+        Toolkit t=Toolkit.getDefaultToolkit();  
+        Image i=t.getImage("pig.gif");  
+        g.drawImage(i, 120,200,this);  
+          
+    }  
+        public static void main(String[] args) {  
+        mypic m=new mypic();  
+        JFrame f=new JFrame();  
+        f.add(m);  
+        f.setSize(200,200);  
+        f.setVisible(true);  
+    }  
+} 
